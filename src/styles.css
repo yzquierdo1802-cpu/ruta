@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #f3efe6;
+  --color-foreground: #152028;
+  --color-card: #fffdf8;
+  --color-card-foreground: #152028;
+  --color-popover: #fffdf8;
+  --color-popover-foreground: #152028;
+  --color-primary: #0e7c74;
+  --color-primary-foreground: #f4fffc;
+  --color-secondary: #e7e1d4;
+  --color-secondary-foreground: #152028;
+  --color-muted: #e8e2d6;
+  --color-muted-foreground: #5c656c;
+  --color-accent: #d8e8e5;
+  --color-accent-foreground: #0b5f59;
+  --color-destructive: #b4453a;
+  --color-destructive-foreground: #fff8f6;
+  --color-border: #ddd6c8;
+  --color-input: #ddd6c8;
+  --color-ring: #ff8a4b;
+  --color-admin: #143a38;
+  --color-admin-foreground: #e4f1ef;
+  --color-admin-muted: #1c4a47;
+  --color-clay: #c45c3e;
+  --color-warn: #b5762a;
+
+  --color-sky: #6eb4e0;
+  --color-sky-deep: #4a9ad4;
+  --color-coral: #ff8a4b;
+  --color-coral-foreground: #fff7f2;
+  --color-navy: #12283c;
+  --color-daily: #7b5ea7;
+  --color-gold: #e0a14a;
+  --color-nuevo: #d64545;
+  --color-nuevo-foreground: #fff8f6;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 1.75rem;
+  --radius: 0.75rem;
+
+  --shadow-border:
+    0px 0px 0px 1px rgba(21, 32, 40, 0.06),
+    0px 1px 2px -1px rgba(21, 32, 40, 0.06),
+    0px 2px 4px 0px rgba(21, 32, 40, 0.04);
+  --shadow-label: 0 1px 8px rgba(18, 40, 60, 0.45);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-sky);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.shadow-border {
+  box-shadow: var(--shadow-border);
+}
+
+.text-shadow-label {
+  text-shadow: var(--shadow-label);
+}
